@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "budgetApp": {
+            "command": "C:\\Users\\pc\\Documents\\budgetApp\\server\\start-mcp.bat",
+            "args": []
+        }
+    }
+}
