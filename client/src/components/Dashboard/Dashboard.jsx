@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import AiChat from "../ai/AiChat";
+import MobileNav from "../common/MobileNav";
 
 import { getBudgets } from "../../services/budgetService";
 import { getTransactions } from "../../services/transactionService";
@@ -42,6 +43,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
+      <MobileNav />
       <header className="dashboard-header">
         <h1>Budget Dashboard</h1>
         <div className="header-actions">

@@ -208,6 +208,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .dashboard-header h1 {
@@ -575,14 +576,30 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .dashboard-header,
+  .page-header {
+    padding: 16px 20px 16px 80px;
+  }
+
+  .dashboard-header h1,
+  .page-header h1 {
+    font-size: 20px;
+  }
+
   .dashboard-content,
   .page-content {
-    padding: 20px;
+    padding: 20px 16px;
   }
 
   .stats-grid,
   .dashboard-sections {
     grid-template-columns: 1fr;
+  }
+
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .filters-grid {
@@ -599,7 +616,52 @@ body {
 
   .data-table th,
   .data-table td {
-    padding: 8px;
+    padding: 8px 6px;
+  }
+
+  /* Mobile-friendly buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 20px;
+    font-size: 16px;
+    min-height: 44px;
+    /* iOS touch target minimum */
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dashboard-actions .btn-primary {
+    width: 100%;
+  }
+
+  .page-actions {
+    flex-direction: column;
+  }
+
+  .page-actions .btn-primary {
+    width: 100%;
+  }
+
+  /* Mobile form improvements */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+    /* Prevents zoom on iOS */
+    min-height: 44px;
+  }
+
+  /* Mobile table scrolling */
+  .table-container {
+    padding: 12px;
+  }
+
+  /* Better spacing for mobile */
+  .dashboard-section,
+  .summary-container {
+    padding: 16px;
   }
 }
-
